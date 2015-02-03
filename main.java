@@ -1,19 +1,29 @@
-//Example for Brian
-
-import java.util.Scanner;
+import java.util.Random;
 
 class Main {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.printf("Enter first integer: ");
-        int int1 = input.nextInt();
-        System.out.printf("Enter second integer: ");
-        int int2 = input.nextInt();
-        int sum = int1 + int2;
-        int difference = int1 - int2;
-        int product = int1 * int2;
-        int quotient = int1 / int2;
+  public static void doStuff(String s, Double... a) {
+    System.out.println(a.length);
+  }
 
-        System.out.println(int1 + " + " + int2 + " = " + sum);
-    }
+  public static void main(String[] args) {
+    System.out.println(new Thing("sup"));
+    doStuff("sup", 1.0, 2.0, 3.0);
+  }
+}
+
+
+class Thing {
+  private String message;
+
+  public Thing() {
+    new Thing("it works");
+  }
+
+  public Thing(String message) {
+    this.message = message;
+  }
+
+  public String toString() {
+    return "sup dawg from Thing! " + message;
+  }
 }

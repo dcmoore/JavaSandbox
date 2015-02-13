@@ -5,6 +5,6 @@ __The point of this project is to provide a space where you can remove yourself 
 To execute the program do the following:
 
 ```bash
-javac main.java
-java Main
+mvn jar:jar
+java -jar target/JavaSandbox-1.0-SNAPSHOT.jar
 ```

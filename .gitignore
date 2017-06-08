@@ -2,3 +2,5 @@
 target/
 .idea/
 JavaSandbox.iml
+__files/
+mappings/

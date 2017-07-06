@@ -4,15 +4,21 @@ class Main {
 
   public static void main(String[] args) {
     try {
-      Send.sendMessage("sup dude");
-      Send.sendMessage("how are you?");
-      Receive.receiveMessage();
-    } catch (java.io.IOException e) {
-      System.out.println("shit's broke");
-    } catch (java.lang.InterruptedException e) {
-      System.out.println("shit's broke");
-    } catch (java.util.concurrent.TimeoutException e) {
-      System.out.println("shit's broke");
+      switch(args[0]) {
+        case "send":
+          System.out.println("Type a message, then hit enter to send:");
+          String message = System.console().readLine();
+          Send.sendMessage(message);
+          System.out.println("Success!!!");
+          break;
+        case "receive":
+          Receive.receiveMessage();
+          break;
+      }
+    } catch (java.io.IOException|java.lang.InterruptedException|java.util.concurrent.TimeoutException e) {
+      System.out.println("everything is broken");
+    } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+      System.out.println("Specify 'send' or 'receive'");
     }
   }
 }

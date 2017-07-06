@@ -25,3 +25,5 @@ _^^^ (assumes *nix, use `netstat` for windows)_
 The last setup step is to build this application using [maven](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html). To do so, run the following command: `mvn install`
 
 Now you can run the jar and execute the program: `java -jar target/RabbitMQSandbox-1.0-SNAPSHOT.jar`
+
+Using this app as your sandbox environment, run through the [RabbitMQ tutorials](https://www.rabbitmq.com/getstarted.html) to get your hands dirty.

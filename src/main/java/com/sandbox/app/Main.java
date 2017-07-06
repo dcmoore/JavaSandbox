@@ -1,13 +1,18 @@
 package com.sandbox.app;
 
-import java.util.Random;
-
 class Main {
-  public void doStuff(String s) {
-    System.out.println("printing: " + s);
-  }
 
   public static void main(String[] args) {
-    new Main().doStuff("sup");
+    try {
+      Send.sendMessage("sup dude");
+      Send.sendMessage("how are you?");
+      Receive.receiveMessage();
+    } catch (java.io.IOException e) {
+      System.out.println("shit's broke");
+    } catch (java.lang.InterruptedException e) {
+      System.out.println("shit's broke");
+    } catch (java.util.concurrent.TimeoutException e) {
+      System.out.println("shit's broke");
+    }
   }
 }

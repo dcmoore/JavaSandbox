@@ -22,6 +22,6 @@ beam.smp 6696 daveloper   69u  IPv4 0x8e8b84ea1fd6e2f      0t0  TCP *:15672 (LIS
 
 _^^^ (assumes *nix, use `netstat` for windows)_
 
-The last setup step is to package this application using [maven](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html). To do so, run the following command: `mvn package`
+The last setup step is to build this application using [maven](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html). To do so, run the following command: `mvn install`
 
 Now you can run the jar and execute the program: `java -jar target/RabbitMQSandbox-1.0-SNAPSHOT.jar`
